@@ -5173,10 +5173,10 @@ a:hover {
 }
 
 .form__method-img {
-  width: 70px;
-  height: 35px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  width: 80px;
+  height: 50px;
+  margin-bottom: 15px;
+  margin-right: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -5191,6 +5191,8 @@ a:hover {
 
 @media (min-width: 576px) {
   .form__method-img {
+    width: 70px;
+    height: 35px;
     margin-right: 0;
   }
 }
@@ -5239,14 +5241,16 @@ a:hover {
   margin-bottom: 45px;
 }
 
-.form__coupon_toggle {
+.form__coupon-toggle {
   color: #ffffff;
   cursor: pointer;
+  text-decoration: underline;
   transition: all .1s ease-in;
 }
 
-.form__coupon_toggle:hover, .form__coupon_toggle:active {
+.form__coupon-toggle:hover, .form__coupon-toggle:active {
   color: #3FFF00;
+  text-decoration: none;
   transition: all .1s ease-in;
 }
 
@@ -5308,7 +5312,7 @@ a:hover {
 .btn {
   display: block;
   width: 100%;
-  max-width: 460px;
+  max-width: 360px;
   height: 55px;
   padding: 15px;
   white-space: nowrap;
@@ -5322,6 +5326,12 @@ a:hover {
   -webkit-appearance: none;
   outline: none !important;
   transition: all .1s ease-in;
+}
+
+@media (min-width: 992px) {
+  .btn {
+    max-width: 460px;
+  }
 }
 
 .btn:hover, .btn:active {

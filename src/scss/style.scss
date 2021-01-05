@@ -27,7 +27,7 @@ b, strong {
 a {
 	text-decoration: none;
 	@include hover-transition;
-    color: lime;
+	color: lime;
 	&:hover {
 		color: $white;
 		text-decoration: none;
@@ -57,8 +57,8 @@ a {
 	background: $gray-darkest;
 	border-radius: 10px;
 	@include media-breakpoint-up("lg") {
-        max-width: 700px;
-        padding: 60px 50px 90px;
+		max-width: 700px;
+		padding: 60px 50px 90px;
 	}
 	& > p {
 	  margin-bottom: 35px;
@@ -67,13 +67,13 @@ a {
   &__summary {//right side
 	  padding: 40px 20px;
 	  @include media-breakpoint-up("lg") {
-          max-width: 410px;
-          padding: 45px 0 40px 70px;
+		  max-width: 410px;
+		  padding: 45px 0 40px 70px;
 	  }
 	  hr {
-        width: 100%;
-        height: 3px;
-        color: $gray-mid;
+		width: 100%;
+		height: 3px;
+		color: $gray-mid;
 	  }
   }
   // btn
@@ -89,7 +89,7 @@ a {
 	.row:nth-of-type(2) & {//smaller margin on email
 	  margin-bottom: 15px;
 	}
-    //label of focused input, errored is styled by js
+	//label of focused input, errored is styled by js
 	&:focus-within .form__label {
 		color: $lime;
 	}
@@ -102,13 +102,13 @@ a {
 	&_margin {
 	  margin-bottom: 20px;
 	}
-    &_invalid {//added by tmp js
-      color: $red;
-    }
-    //OR
-    //.form__group_invalid & {
-    //  color: $red;
-    //}
+	&_invalid {//added by tmp js
+	  color: $red;
+	}
+	//OR
+	//.form__group_invalid & {
+	//  color: $red;
+	//}
   }
   &__field {
 	width: 100%;
@@ -117,153 +117,157 @@ a {
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid $gray-lite;
-    border-radius: 0;
+	border-radius: 0;
 	font-size: 14px;
 	font-weight: bold;
 	color: $white;
-    outline: none !important;
-    -webkit-appearance: none;
-    &:invalid,
-    &:-moz-submit-invalid,
-    &:-moz-ui-invalid {
-      border-bottom: 2px solid $red;
-      outline: none;
-      box-shadow: none;
-    }
+	outline: none !important;
+	-webkit-appearance: none;
+	&:invalid,
+	&:-moz-submit-invalid,
+	&:-moz-ui-invalid {
+	  border-bottom: 2px solid $red;
+	  outline: none;
+	  box-shadow: none;
+	}
   }
-    // errors
-    &__error {
-      display: none;
-      color: $red;
-      .form__field:invalid+& {
-        display: block;
-      }
-    }
+	// errors
+	&__error {
+	  display: none;
+	  color: $red;
+	  .form__field:invalid+& {
+		display: block;
+	  }
+	}
 
-    @import "custom-select";
-    // OR use this select, not fully customized but simple
-    //&__select {
-    //  background: url("../img/icon-select-arrow-right.svg") right center no-repeat;
-    //  -webkit-appearance: none;
-    //  //caret-color: $gray-select-lite;
-    //  & option {
-    //    background: $gray-select-dark;
-    //    &:hover {
-    //      background: $gray-select-lite !important;
-    //      color: red !important;
-    //    }
-    //  }
-    //  &:focus:hover {
-    //    background: url("../img/icon-select-arrow-down.svg") right center no-repeat;
-    //  }
-    //}
+	@import "custom-select";
+	// OR use this select, not fully customized but simple
+	//&__select {
+	//  background: url("../img/icon-select-arrow-right.svg") right center no-repeat;
+	//  -webkit-appearance: none;
+	//  //caret-color: $gray-select-lite;
+	//  & option {
+	//    background: $gray-select-dark;
+	//    &:hover {
+	//      background: $gray-select-lite !important;
+	//      color: red !important;
+	//    }
+	//  }
+	//  &:focus:hover {
+	//    background: url("../img/icon-select-arrow-down.svg") right center no-repeat;
+	//  }
+	//}
 
-    &__note {
-      color: $gray-mid;
-    }
-    //custom radios
-    & .hidden-radio {
-      display: none;
-    }
-    &__method-img {
-      width: 70px;
-      height: 35px;
-      margin-bottom: 10px;
-      margin-right: 10px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      background: $gray-dark;
-      border: 2px solid $gray-dark;
-      border-radius: 5px;
-      cursor: pointer;
-      @include media-breakpoint-up("sm") {
-        margin-right: 0;
-      }
-      @include media-breakpoint-up("md") {
-          width: 80px;
-          height: 45px;
-      }
-      &:hover {
-        opacity: .9;
-      }
-      .hidden-radio:checked+& {
-        border: 2px solid $lime;
-      }
-    }
-    &__account-label {
-      position: relative;
-      padding-left: 35px;
-      cursor: pointer;
-      &:before { //custom radio
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -2px;
-        width: 22px;
-        height: 22px;
-        background: url("../img/icon-radio-unchecked.svg") center no-repeat;
-      }
-      &:hover {
-        opacity: .9;
-      }
-      .hidden-radio:checked + &:before {
-        background: url("../img/icon-radio-checked.svg") center no-repeat;
-      }
-    }
+	&__note {
+	  color: $gray-mid;
+	}
+	//custom radios
+	& .hidden-radio {
+	  display: none;
+	}
+	&__method-img {
+	  width: 80px;
+	  height: 50px;
+	  margin-bottom: 15px;
+	  margin-right: 20px;
+	  display: flex;
+	  justify-content: center;
+	  align-content: center;
+	  background: $gray-dark;
+	  border: 2px solid $gray-dark;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  @include media-breakpoint-up("sm") {//1 row
+		width: 70px;
+		height: 35px;
+		margin-right: 0;
+	  }
+	  @include media-breakpoint-up("md") {
+		  width: 80px;
+		  height: 45px;
+	  }
+	  &:hover {
+		opacity: .9;
+	  }
+	  .hidden-radio:checked+& {
+		border: 2px solid $lime;
+	  }
+	}
+	&__account-label {
+	  position: relative;
+	  padding-left: 35px;
+	  cursor: pointer;
+	  &:before { //custom radio
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: -2px;
+		width: 22px;
+		height: 22px;
+		background: url("../img/icon-radio-unchecked.svg") center no-repeat;
+	  }
+	  &:hover {
+		opacity: .9;
+	  }
+	  .hidden-radio:checked + &:before {
+		background: url("../img/icon-radio-checked.svg") center no-repeat;
+	  }
+	}
 
   // Summary side
   &__total {
-    margin-bottom: 45px;
+	margin-bottom: 45px;
   }
   &__coupon {
-    &_toggle {
-      color: $white;
-      cursor: pointer;
-      @include hover-transition;
-      &:hover, &:active {
-          color: $lime;
-          @include hover-transition;
-      }
-    }
-    &_remove {
-      color: $lime;
-      cursor: pointer;
-      @include hover-transition;
-       &:hover, &:active {
-         color: $white;
-       }
-    }
-    &-btn {
-      margin-top: 15px;
-      @include media-breakpoint-only("lg") {
-        margin-top: 0;
-      }
-    }
+	&-toggle {
+	  color: $white;
+	  cursor: pointer;
+	  text-decoration: underline;
+	  @include hover-transition;
+	  &:hover, &:active {
+		  color: $lime;
+		  text-decoration: none;
+		  @include hover-transition;
+	  }
+	}
+	&_remove {
+	  color: $lime;
+	  cursor: pointer;
+	  @include hover-transition;
+	   &:hover, &:active {
+		 color: $white;
+	   }
+	}
+	&-btn {
+	  margin-top: 15px;
+	  @include media-breakpoint-only("lg") {
+		margin-top: 0;
+	  }
+	}
   }
   &__btn-wrap {
-    display: flex;
-    justify-content: flex-end;
-    //align-items: center;
-    @include media-breakpoint-only("lg") {
-      justify-content: flex-start;
-      &_purchase .btn {
-        margin-top: 15px;
-      }
-    }
-    @include media-breakpoint-up("xl") {
-      justify-content: flex-end;
-    }
+	display: flex;
+	justify-content: flex-end;
+	//align-items: center;
+	@include media-breakpoint-only("lg") {
+	  justify-content: flex-start;
+	  &_purchase .btn {
+		margin-top: 15px;
+	  }
+	}
+	@include media-breakpoint-up("xl") {
+	  justify-content: flex-end;
+	}
   }
   &__secure {
-    margin-top: 100px;
+	margin-top: 100px;
   }
   &__secure-img {
-    display: inline-block;
-    width: 100px;
-    height: 45px;
-    margin: 0 15px 20px 0;
+	display: inline-block;
+	width: 100px;
+	height: 45px;
+	margin: 0 15px 20px 0;
   }
 
 }//form
@@ -273,7 +277,7 @@ a {
 .btn {
 	display: block;
 	width: 100%;
-	max-width: 460px;
+	max-width: 360px;
 	height: 55px;
 	padding: 15px;
 	white-space: nowrap;
@@ -287,6 +291,9 @@ a {
 	-webkit-appearance: none;
 	outline: none !important;
 	@include hover-transition;
+	@include media-breakpoint-up("lg") {
+		max-width: 460px;
+    }
 	&:hover, &:active {
 		background: $lime;
 		border-color: $lime;
@@ -299,10 +306,10 @@ a {
 		padding: 8px;
 		font-size: 14px;
 		font-weight: normal;
-        @media (max-width: 400px) {
-          min-width: 120px;
-          font-size: 12px;
-        }
+		@media (max-width: 400px) {
+		  min-width: 120px;
+		  font-size: 12px;
+		}
 	}
 	&_green {
 		border-color: $lime;
@@ -323,9 +330,9 @@ a {
 // Text
 .txt {
   &_center {
-    text-align: center;
+	text-align: center;
   }
   &_small {
-      font-size: 12px
+	  font-size: 12px
   }
 }
