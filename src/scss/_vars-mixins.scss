@@ -1,0 +1,28 @@
+// Jan, 4, 2021  by @eternalduck
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$almost-black: #1C1919;
+$gray-darkest: #252428;
+$gray-dark: #302F35;
+$gray-mid: #636363;
+$gray-select-lite: #45434D;
+$gray-select-dark: #302F35;
+$gray-lite: #97979A;
+$lime: #3FFF00;
+$red: #EB001B;
+
+// Common dimensions
+//$header-height-xs: 60px;
+
+
+/////////////////
+// Mixins
+
+@mixin hover-transition {
+	transition: all .1s ease-in;
+}
+
+
+

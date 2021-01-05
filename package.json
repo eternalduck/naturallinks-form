@@ -1,0 +1,34 @@
+{
+  "name": "naturallinks-form",
+  "version": "1.0.0",
+  "description": "css compiler with autoprefixer",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eternalduck/naturallinks-form"
+  },
+  "author": "eternalduck",
+  "license": "ISC",
+  "browserslist": [
+    "defaults",
+    "> 1%",
+    "ie 8-11"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.12",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "keywords": []
+}
