@@ -32,112 +32,126 @@
 		</div>
 	</div>
 
-    <form class="form row" id="" name="">
+	<form class="form row" id="order-form" name="order-form">
 		<div class="col-xl-7 col-lg-8 col-12">
 			<div class="form__main">
 				<p>Unique Natural Links from the world’s most popular resources as a reliable service</p>
-					<div class="row">
-						<div class="form__group col-md-6 col-12">
-                            <label class="form__label" for="firstname">First name*</label>
-                            <input type="text" class="form__field" name="first-name" id="firstname" value="" required/>
-                            <p class="form__error txt_small">Please, enter your first name</p>
-						</div>
+				<div class="row">
+					<div class="form__group col-md-6 col-12">
+						<label class="form__label" for="firstname">First name*</label>
+						<input type="text" class="form__field" name="first-name" id="firstname" value="" required/>
+						<p class="form__error txt_small">Please, enter your first name</p>
+					</div>
 
-						<div class="form__group col-md-6 col-12">
-                            <label class="form__label" for="lastname">Last name*</label>
-                            <input type="text" class="form__field" name="last-name" id="lastname" value=""/>
-                            <p class="form__error txt_small">Please, enter your last name</p>
-						</div>
-					</div><!--names row-->
+					<div class="form__group col-md-6 col-12">
+						<label class="form__label" for="lastname">Last name</label>
+						<input type="text" class="form__field" name="last-name" id="lastname" value=""/>
+					</div>
+				</div><!--names row-->
 
-					<div class="row">
-						<div class="form__group col-12">
-                            <label class="form__label" for="email">Email*</label>
-                            <input type="text" class="form__field" name="email" id="email" value=""/>
-                            <p class="form__error txt_small">Email must contain @</p>
-                            <p class="form__note txt_small">
-                                Already have an account? <a href="https://clients.naturallinks.net/login/order/9605ND?_ga=2.197161071.1733038922.1609752199-1217257865.1607512056">Sign in here</a>.</p>
-						</div>
-					</div><!--email row-->
+				<div class="row">
+					<div class="form__group col-12">
+						<label class="form__label" for="email">Email*</label>
+						<input type="text" class="form__field" name="email" id="email" value="" required/>
+						<p class="form__error txt_small">Email must contain @</p>
+						<p class="form__note txt_small">
+							Already have an account? <a
+								href="https://clients.naturallinks.net/login/order/9605ND?_ga=2.197161071.1733038922.1609752199-1217257865.1607512056">Sign
+							in here</a>.</p>
+					</div>
+				</div><!--email row-->
 
-                    <div class="row">
-						<div class="form__group col-12">
-                            <label class="form__label" for="package">Package*</label>
+				<div class="row">
+					<div class="form__group col-12">
+						<label class="form__label" for="package">Package*</label>
 
-                            <!--1. js-css custom select-->
-                            <div class="form__select-wrapper">
-                                <div class="form__select form__field">
-                                    <div class="form__select-trigger"><span>20 Test links &mdash; $159</span>
-                                        <div class="form__select-arrow"></div>
-                                    </div>
-                                    <div class="form__select-options">
-                                        <span class="form__select-option selected" data-value="20">20 Test links &mdash; $159</span>
-                                        <span class="form__select-option" data-value="50">500 Standard links &mdash; $3000</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- OR 2. Simple select, see scss comments-->
-<!--                            <select class="form__field form__select" id="package">-->
-<!--                                <option value="20">20 Test links &mdash; $159</option>-->
-<!--                                <option value="500">500 Standard links &mdash; $3000</option>-->
-<!--                            </select>-->
-						</div>
-					</div><!--package row-->
+						<div class="form__select-wrapper" id="package">
+							<div class="form__select form__field">
+								<div class="form__select-trigger"><span>20 Test links &mdash; $159</span>
+									<div class="form__select-arrow"></div>
+								</div>
+								<div class="form__select-options">
+									<span class="form__select-option selected" data-value="20">20 Test links &mdash; $159</span>
+									<span class="form__select-option" data-value="50">500 Standard links &mdash; $3000</span>
+								</div>
+							</div>
+						</div><!--end select-->
+					</div>
+				</div><!--package row-->
 
-                    <div class="form__group row">
-						<div class="col-12">
-                            <label class="form__label form__label_margin">Payment Method*</label>
-						</div>
+				<div class="form__group row">
+					<div class="col-12">
+						<label class="form__label form__label_margin">Payment Method*</label>
+					</div>
 
-						<div class="col-12 d-flex flex-lg-nowrap flex-wrap justify-content-sm-between justify-content-start">
-                            <input type="radio" class="hidden-radio" name="method" id="wire" value="wire" checked/>
-                            <label class="form__method-img" for="wire">
-                                <img src="img/pay-wire.svg" alt="wire"/></label>
+					<div class="col-12 d-flex flex-lg-nowrap flex-nowrap justify-content-start">
+						<input type="radio" class="hidden-radio" name="method" id="card" value="visa"/>
+						<label class="form__method-img" for="card">
+							<img src="img/pay-card.svg" alt="card"/>
+						</label>
 
-                            <input type="radio" class="hidden-radio" name="method" id="master" value="master"/>
-                            <label class="form__method-img" for="master">
-                                <img src="img/pay-master.svg" alt="master"/>
-                            </label>
+						<input type="radio" class="hidden-radio" name="method" id="paypal" value="paypal"/>
+						<label class="form__method-img" for="paypal">
+							<img src="img/pay-paypal.svg" alt="paypal"/>
+						</label>
 
-                            <input type="radio" class="hidden-radio" name="method" id="visa" value="visa"/>
-                            <label class="form__method-img" for="visa">
-                                <img src="img/pay-visa.svg" alt="visa"/>
-                            </label>
+						<input type="radio" class="hidden-radio" name="method" id="webmoney" value="webmoney"/>
+						<label class="form__method-img" for="webmoney">
+							<img src="img/pay-webmoney.svg" alt="webmoney"/>
+						</label>
+					</div>
+				</div><!--method row-->
 
-                            <input type="radio" class="hidden-radio" name="method" id="amex" value="amex"/>
-                            <label class="form__method-img" for="amex">
-                                <img src="img/pay-amex.svg" alt="amex"/>
-                            </label>
+				<div class="row">
+					<div class="col-12">
+						<label class="form__label form__label_margin">Account*</label>
+					</div>
+					<div class="form__group col-md-4 col-6">
+						<input type="radio" class="hidden-radio" name="account" id="personal" value="personal" checked/>
+						<label class="form__radio-label" for="personal">Personal</label>
+					</div>
+					<div class="form__group col-md-8 col-6">
+						<input type="radio" class="hidden-radio" name="account" id="business" value="business"/>
+						<label class="form__radio-label" for="business">Business</label>
+					</div>
+				</div><!--account row-->
 
-                            <input type="radio" class="hidden-radio" name="method" id="paypal" value="paypal"/>
-                            <label class="form__method-img" for="paypal">
-                                <img src="img/pay-paypal.svg" alt="paypal"/>
-                            </label>
+				<div class="row d-none" id="country-set">
+					<div class="form__group col-12">
+						<label class="form__label" for="country">Country</label>
+						<div class="form__select-wrapper" id="country">
+							<div class="form__select form__field">
+								<div class="form__select-trigger"><span>USA</span>
+									<div class="form__select-arrow"></div>
+								</div>
+								<div class="form__select-options">
+									<span class="form__select-option selected" data-value="USA">USA</span>
+									<span class="form__select-option" data-value="other1">Nice Country</span>
+									<span class="form__select-option" data-value="other2">Beautiful Island</span>
+									<span class="form__select-option" data-value="other3">Wonderful State</span>
+								</div>
+							</div>
+						</div><!--end select-->
+					</div>
+				</div><!--country row-->
 
-                            <input type="radio" class="hidden-radio" name="method" id="payoneer" value="payoneer"/>
-                            <label class="form__method-img" for="payoneer">
-                                <img src="img/pay-payoneer.svg" alt="payoneer"/>
-                            </label>
-						</div>
-					</div><!--method row-->
+				<div class="row d-none" id="vat-set">
+					<div class="col-12">
+						<label class="form__label form__label_margin">Exist VAT</label>
+					</div>
+					<div class="form__group col-md-4 col-6">
+						<input type="radio" class="hidden-radio" name="vat" id="vat-yes" value="vat-yes" checked/>
+						<label class="form__radio-label" for="vat-yes">Yes</label>
+					</div>
+					<div class="form__group col-md-8 col-6">
+						<input type="radio" class="hidden-radio" name="vat" id="vat-no" value="vat-no"/>
+						<label class="form__radio-label" for="vat-no">No</label>
+					</div>
+				</div><!--vat row-->
 
-                    <div class="row">
-                        <div class="col-12">
-                            <label class="form__label form__label_margin">Account*</label>
-						</div>
-						<div class="form__group col-md-4 col-6">
-                            <input type="radio" class="hidden-radio" name="account" id="personal" value="personal" checked/>
-                            <label class="form__account-label" for="personal">Personal</label>
-						</div>
-                        <div class="form__group col-md-8 col-6">
-                            <input type="radio" class="hidden-radio" name="account" id="business" value="business"/>
-                            <label class="form__account-label" for="business">Business</label>
-						</div>
-					</div><!--account row-->
-
-                    <div class="row justify-content-center">
-                         <button type="submit" class="form__submit btn btn_green">Complete Purchase</button>
-                    </div>
+				<div class="row justify-content-center">
+					<button type="submit" class="form__submit btn btn_green">Complete Purchase</button>
+				</div>
 
 
 			</div>
@@ -147,52 +161,52 @@
 			<div class="form__summary">
 				<div class="form__total row">
 					<div class="col-12">
-                        <b>SUMMARY</b>
+						<b>SUMMARY</b>
 						<hr/>
 					</div>
 					<div class="col-6">
-                        <p><b>Total</b></p>
+						<p><b>Total</b></p>
 					</div>
 					<div class="col-6 d-flex justify-content-end">
-					   <p id="form-total">USD $159</p>
+						<p id="form-total">USD $159</p>
 					</div>
 				</div><!--summary row-->
 
-                <div class="row align-content-center" id="purchase-set">
-                    <div class="col-xl-6 col-lg-12 col-6 d-flex align-items-center">
-                        <p class="form__coupon form__coupon-toggle txt_small" id="toggle-coupon">Have a coupon?</p>
-                    </div>
-                    <div class="form__btn-wrap form__btn-wrap_purchase col-xl-6 col-lg-12 col-6">
-                        <button class="btn btn_small btn_white" type="submit">Complete Purchase</button>
-                    </div>
-                </div><!--purchase-set row-->
+				<div class="row align-content-center" id="purchase-set">
+					<div class="col-xl-6 col-lg-12 col-6 d-flex align-items-center">
+						<p class="form__coupon form__coupon-toggle txt_small" id="toggle-coupon">Have a coupon?</p>
+					</div>
+					<div class="form__btn-wrap form__btn-wrap_purchase col-xl-6 col-lg-12 col-6">
+						<button class="btn btn_small btn_white" type="submit">Complete Purchase</button>
+					</div>
+				</div><!--purchase-set row-->
 
-                <div class="row d-none" id="coupon-set">
-                    <div class="form__group col-xl-7 col-lg-12 col-6">
-                        <label class="form__label" for="coupon-field">Enter coupon code</label>
-                        <input type="text" class="form__field" name="coupon" id="coupon-field" value=""/>
-    <p class="form__coupon form__coupon_remove txt_small" id="remove-coupon">Remove</p>
-                    </div>
-                    <div class="form__btn-wrap col-xl-5 col-lg-12 col-6">
-                        <button class="form__coupon-btn btn btn_small btn_white" id="coupon-button" type="button">Apply coupon</button>
+				<div class="row d-none" id="coupon-set">
+					<div class="form__group col-xl-7 col-lg-12 col-6">
+						<label class="form__label" for="coupon-field">Enter coupon code</label>
+						<input type="text" class="form__field" name="coupon" id="coupon-field" value=""/>
+						<p class="form__coupon form__coupon_remove txt_small" id="remove-coupon">Remove</p>
+					</div>
+					<div class="form__btn-wrap col-xl-5 col-lg-12 col-6">
+						<button class="form__coupon-btn btn btn_small btn_white" id="coupon-button" type="button">Apply coupon
+						</button>
 
-                    </div>
-                </div><!--coupon-set row-->
+					</div>
+				</div><!--coupon-set row-->
 
-                <div class="form__secure row">
-                    <div class="txt_center col-12">
-                        <img src="img/secure-checkout.png" class="form__secure-img" alt="Secure Checkout"/>
-                        <img src="img/secure-privacy.png" class="form__secure-img" alt="Secure Checkout"/>
-                        <p class="txt_small">Questions? We're here to help.<br/>
-                            <a href="#">Contact us</a>
-                        </p>
-                    </div>
-                </div><!--secure row-->
+				<div class="form__secure row">
+					<div class="txt_center col-12">
+						<img src="img/secure-checkout.png" class="form__secure-img" alt="Secure Checkout"/>
+						<img src="img/secure-privacy.png" class="form__secure-img" alt="Secure Checkout"/>
+						<p class="txt_small">Questions? We're here to help.<br/>
+							<a href="#">Contact us</a>
+						</p>
+					</div>
+				</div><!--secure row-->
 
 			</div>
 		</div>
-    </form>
-
+	</form>
 
 
 </div>
