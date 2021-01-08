@@ -22,23 +22,36 @@ document.addEventListener("DOMContentLoaded", function () {
 		function toggleCountry() {
 			if (document.getElementById("business").checked) {
 				countrySet.classList.remove("d-none");
-				vatSet.classList.remove("d-none");
 			} else {
 				countrySet.classList.add("d-none");
-				vatSet.classList.add("d-none");
 			}
 	});
+	// Toggle VAT after certain countries selection, called from a custom select
+	function toggleVat(selected) {
+		let vatCountries = ["other1", "other2"];
+		if(vatCountries.includes(selected.dataset.value)) {
+			vatSet.classList.remove("d-none");
+			// console.info(selected.dataset.value)
+		} else {
+			vatSet.classList.add("d-none");
+			// console.info("NO VAT")
+		}
+	}
 
 
 // Custom select
 // based on https://andrejgajdos.com/custom-select-dropdown/
 	for (const option of document.querySelectorAll(".form__select-option")) {
 		option.addEventListener("click", function selectOption() {
-			if (!this.classList.contains("selected")) {
+			// if (!this.classList.contains("selected")) {
 				this.parentNode.querySelector(".form__select-option.selected").classList.remove("selected");
 				this.classList.add("selected");
 				this.closest(".form__select").querySelector(".form__select-trigger span").textContent = this.textContent;
-			}
+
+				if (this.closest(".form__select").id === "country") {
+					toggleVat(this);
+				}
+			// }
 		})
 	};
 
@@ -49,12 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 	window.addEventListener("click", function closeSelect(e) {
 			for (const select of document.querySelectorAll(".form__select")) {
-			if (!select.contains(e.target)) {
-				select.classList.remove("open");
-			}
+				if (!select.contains(e.target)) {
+					select.classList.remove("open");
+				}
 			}
 	});
 // end custom select
+
 });//DOMContentLoaded
 
 //////////////////////////////////////
