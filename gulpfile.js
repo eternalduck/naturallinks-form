@@ -5,7 +5,7 @@ const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
 const changed = require("gulp-changed");
 const notify = require("gulp-notify");
-// const babel = require("gulp-babel");
+const babel = require("gulp-babel");
 // const concat = require("gulp-concat");
 const browsersync = require("browser-sync");
 
@@ -49,9 +49,9 @@ function css() {
 function js() {
 	return gulp
 	.src(path.src.js)
-	// .pipe(babel({
-	// 	presets: ["@babel/env"]
-	// }))
+	.pipe(babel({
+		presets: ["@babel/env"]
+	}))
 	.pipe(gulp.dest(path.build.js))
 	.pipe(browsersync.stream())
 }
