@@ -64,13 +64,19 @@
 				<div class="row">
 					<div class="form__group col-12">
 						<label class="form__label" for="package">Package*</label>
-						<div class="form__select-wrap">
-							<select class="form__select form__field" id="package">
-								<option value="20">20 Test links &mdash; $159</option>
-								<option value="500">500 Standard links &mdash; $3000</option>
-								<option value="custom">I’d like to get more than 500 links</option>
-							</select>
-						</div>
+
+						<div class="form__select-wrapper">
+							<div class="form__select form__field" id="package">
+								<div class="form__select-trigger"><span>20 Test links &mdash; $159</span>
+									<div class="form__select-arrow"></div>
+								</div>
+								<div class="form__select-options">
+									<span class="form__select-option selected" data-value="20">20 Test links &mdash; $159</span>
+									<span class="form__select-option" data-value="50">500 Standard links &mdash; $3000</span>
+									<span class="form__select-option" data-value="custom">I'd like to get more than 500 links</span>
+								</div>
+							</div>
+						</div><!--end select-->
 					</div>
 				</div><!--package row-->
 
@@ -114,59 +120,52 @@
 				<div class="row d-none" id="country-set">
 					<div class="form__group col-12">
 						<label class="form__label" for="country">Country</label>
-						<div class="form__select-wrap">
-							<select class="form__select form__field" id="country">
-								<option value="Afghanistan">Afghanistan</option>
-								<option value="Åland Islands">Åland Islands - VAT test</option>
-								<option value="Albania">Albania - VAT test</option>
-								<option value="Algeria">Algeria</option>
-								<option value="American Samoa">American Samoa</option>
-								<option value="AndorrA">AndorrA</option>
-								<option value="Angola">Angola</option>
-								<option value="Anguilla">Anguilla</option>
-								<option value="Antarctica">Antarctica</option>
-								<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-								<option value="Denmark">Denmark</option>
-								<option value="Zimbabwe">Zimbabwe</option>
-																<option value="Afghanistan">Afghanistan</option>
-								<option value="Åland Islands">Åland Islands - VAT test</option>
-								<option value="Albania">Albania - VAT test</option>
-								<option value="Algeria">Algeria</option>
-								<option value="American Samoa">American Samoa</option>
-								<option value="AndorrA">AndorrA</option>
-								<option value="Angola">Angola</option>
-								<option value="Anguilla">Anguilla</option>
-								<option value="Antarctica">Antarctica</option>
-								<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-								<option value="Denmark">Denmark</option>
-								<option value="Zimbabwe">Zimbabwe</option>
-																<option value="Afghanistan">Afghanistan</option>
-								<option value="Åland Islands">Åland Islands - VAT test</option>
-								<option value="Albania">Albania - VAT test</option>
-								<option value="Algeria">Algeria</option>
-								<option value="American Samoa">American Samoa</option>
-								<option value="AndorrA">AndorrA</option>
-								<option value="Angola">Angola</option>
-								<option value="Anguilla">Anguilla</option>
-								<option value="Antarctica">Antarctica</option>
-								<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-								<option value="Denmark">Denmark</option>
-								<option value="Zimbabwe">Zimbabwe</option>
-																<option value="Afghanistan">Afghanistan</option>
-								<option value="Åland Islands">Åland Islands - VAT test</option>
-								<option value="Albania">Albania - VAT test</option>
-								<option value="Algeria">Algeria</option>
-								<option value="American Samoa">American Samoa</option>
-								<option value="AndorrA">AndorrA</option>
-								<option value="Angola">Angola</option>
-								<option value="Anguilla">Anguilla</option>
-								<option value="Antarctica">Antarctica</option>
-								<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-								<option value="Denmark">Denmark</option>
-								<option value="Zimbabwe">Zimbabwe</option>
-
-							</select>
-						</div>
+						<div class="form__select-wrapper">
+							<div class="form__select form__field" id="country">
+								<div class="form__select-trigger"><span>USA</span>
+									<div class="form__select-arrow"></div>
+								</div>
+								<div class="form__select-options">
+									<span class="form__select-option" data-value="Afghanistan">Afghanistan</span>
+										<span class="form__select-option selected" data-value="Afghanistan">Afghanistan</span>
+										<span class="form__select-option" data-value="Åland Islands">Åland Islands - VAT test</span>
+										<span class="form__select-option" data-value="Albania">Albania - VAT test</span>
+										<span class="form__select-option" data-value="Algeria">Algeria</span>
+										<span class="form__select-option" data-value="American Samoa">American Samoa</span>
+										<span class="form__select-option" data-value="AndorrA">AndorrA</span>
+										<span class="form__select-option" data-value="Angola">Angola</span>
+										<span class="form__select-option" data-value="Anguilla">Anguilla</span>
+										<span class="form__select-option" data-value="Antarctica">Antarctica</span>
+										<span class="form__select-option" data-value="Antigua and Barbuda">Antigua and Barbuda</span>
+										<span class="form__select-option" data-value="Denmark">Denmark</span>
+										<span class="form__select-option" data-value="Zimbabwe">Zimbabwe</span>
+										<span class="form__select-option" data-value="Afghanistan">Afghanistan</span>
+										<span class="form__select-option" data-value="Åland Islands">Åland Islands - VAT test</span>
+										<span class="form__select-option" data-value="Albania">Albania - VAT test</span>
+										<span class="form__select-option" data-value="Algeria">Algeria</span>
+										<span class="form__select-option" data-value="American Samoa">American Samoa</span>
+										<span class="form__select-option" data-value="AndorrA">AndorrA</span>
+										<span class="form__select-option" data-value="Angola">Angola</span>
+										<span class="form__select-option" data-value="Anguilla">Anguilla</span>
+										<span class="form__select-option" data-value="Antarctica">Antarctica</span>
+										<span class="form__select-option" data-value="Antigua and Barbuda">Antigua and Barbuda</span>
+										<span class="form__select-option" data-value="Denmark">Denmark</span>
+										<span class="form__select-option" data-value="Zimbabwe">Zimbabwe</span>
+										<span class="form__select-option" data-value="Afghanistan">Afghanistan</span>
+										<span class="form__select-option" data-value="Åland Islands">Åland Islands - VAT test</span>
+										<span class="form__select-option" data-value="Albania">Albania - VAT test</span>
+										<span class="form__select-option" data-value="Algeria">Algeria</span>
+										<span class="form__select-option" data-value="American Samoa">American Samoa</span>
+										<span class="form__select-option" data-value="AndorrA">AndorrA</span>
+										<span class="form__select-option" data-value="Angola">Angola</span>
+										<span class="form__select-option" data-value="Anguilla">Anguilla</span>
+										<span class="form__select-option" data-value="Antarctica">Antarctica</span>
+										<span class="form__select-option" data-value="Antigua and Barbuda">Antigua and Barbuda</span>
+										<span class="form__select-option" data-value="Denmark">Denmark</span>
+										<span class="form__select-option" data-value="Zimbabwe">Zimbabwe</span>
+								</div>
+							</div>
+						</div><!--end select-->
 					</div>
 				</div><!--country row-->
 

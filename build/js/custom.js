@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	let couponSet = document.getElementById("coupon-set");
 	let purchaseSet = document.getElementById("purchase-set");
 	let countrySet = document.getElementById("country-set");
-	let countrySelect = document.getElementById("country");
 	let vatSet = document.getElementById("vat-set");
 
 	couponToggle.addEventListener("click", function toggleCoupon() {
@@ -27,27 +26,46 @@ document.addEventListener("DOMContentLoaded", function () {
 				countrySet.classList.add("d-none");
 			}
 	});
-
 	// Toggle VAT after certain countries selection, called from a custom select
-	countrySelect.addEventListener("change", function toggleVat(e){
+	function toggleVat(selected) {
 		let vatCountries = ["Åland Islands", "Albania"];
-		if (vatCountries.indexOf(e.target.value) > -1) {
+		if(vatCountries.indexOf(selected.dataset.value) > -1) {
 			vatSet.classList.remove("d-none");
 		} else {
 			vatSet.classList.add("d-none");
 		}
-	})
-
-	//rotate pseudo arrow
-	let allSelects = document.querySelectorAll(".form__select");
-	for (let i = 0; i < allSelects.length; i++){
-		allSelects[i].addEventListener("click", function styleArrow(){
-			this.parentNode.classList.toggle("active");
-		})
-		allSelects[i].addEventListener("blur", function styleArrow(){
-			this.parentNode.classList.remove("active");
-		})
 	}
+
+
+// Custom select
+// based on https://andrejgajdos.com/custom-select-dropdown/
+	for (let option of document.querySelectorAll(".form__select-option")) {
+		option.addEventListener("click", function selectOption() {
+			// if (!this.classList.contains("selected")) {
+				this.parentNode.querySelector(".form__select-option.selected").classList.remove("selected");
+				this.classList.add("selected");
+				this.closest(".form__select").querySelector(".form__select-trigger span").textContent = this.textContent;
+
+				if (this.closest(".form__select").id === "country") {
+					toggleVat(this);
+				}
+			// }
+		})
+	};
+
+	for (let dropdown of document.querySelectorAll(".form__select-wrapper")) {
+			dropdown.addEventListener("click", function openSelect() {
+				this.querySelector(".form__select").classList.toggle("open");
+			})
+	};
+	window.addEventListener("click", function closeSelect(e) {
+			for (let select of document.querySelectorAll(".form__select")) {
+				if (!select.contains(e.target)) {
+					select.classList.remove("open");
+				}
+			}
+	});
+// end custom select
 
 });//DOMContentLoaded
 
