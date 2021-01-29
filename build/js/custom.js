@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Toggle VAT after certain countries selection, called from a custom select
-	countrySelect.addEventListener("click", function toggleVat(e){
+	countrySelect.addEventListener("change", function toggleVat(e){
 		let vatCountries = ["Åland Islands", "Albania"];
-		if (vatCountries.includes(e.target.value)) {
+		if (vatCountries.indexOf(e.target.value) > -1) {
 			vatSet.classList.remove("d-none");
 		} else {
 			vatSet.classList.add("d-none");
