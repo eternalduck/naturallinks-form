@@ -142,38 +142,35 @@ a {
 		}
 	}
 
-	//@mixin pseudo-arrow {
-	//
-	//}
 	&__select-wrap {
 		position: relative;
 		width: 100%;
 		user-select: none;
-				&:before {
-					content: "";
-					display: block;
-					position: absolute;
-					height: 40px;
-					width: 40px;
-					right: 0;
-					top: 2px;
-					background: $gray-darkest;
-					z-index: 5;
-				}
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 40px;
+          width: 40px;
+          right: 0;
+          top: 2px;
+          background: $gray-darkest;
+          z-index: 5;
+        }
 		&:after {
-					content: "";
-					display: block;
-					position: absolute;
-					height: 18px;
-					width: 18px;
-					right: 3px;
-					top: 20px;
-					background: url("../img/icon-select-arrow-right.svg") center no-repeat;
-					transition: transform .1s ease-in;
-					z-index: 10;
-				}
+          content: "";
+          display: block;
+          position: absolute;
+          height: 18px;
+          width: 18px;
+          right: 3px;
+          top: 20px;
+          background: url("../img/icon-select-arrow-right.svg") center no-repeat;
+          transition: transform .1s ease-in;
+          z-index: 10;
+        }
 		&.active:after {
-					transform: rotate(90deg);
+          transform: rotate(90deg);
 		}
 	}
 	&__select {

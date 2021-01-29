@@ -48,15 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.parentNode.classList.remove("active");
 		})
 	}
-	//
-	// for (let select of document.querySelectorAll(".form__select")){
-	// 	select.addEventListener("click", function styleArrow(){
-	// 		this.parentNode.classList.toggle("active");
-	// 	})
-	// 	select.addEventListener("blur", function styleArrow(){
-	// 		this.parentNode.classList.remove("active");
-	// 	})
-	// }
 
 });//DOMContentLoaded
 
